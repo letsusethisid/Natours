@@ -23,6 +23,7 @@ body {
 }
 
 .header {
+  position: relative;
   background-color: #55c57a;
   background-size: cover;
   background-position: top;
@@ -35,4 +36,37 @@ body {
     url(../img/hero.jpg);
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.header-logo-container {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+.header-logo {
+  height: 24px;
+}
+
+.header-title-container {
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header-title-main {
+  display: block;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+}
+
+.header-title-sub {
+  display: block;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 10px;
+  margin-left: 4px;
 }
