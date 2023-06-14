@@ -1,0 +1,103 @@
+.header {
+  position: relative;
+  background-color: $color-medium-green;
+  background-size: cover;
+  background-position: top;
+  height: 95vh;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-light-green, 0.8),
+      rgba($color-medium-green, 0.8)
+    ),
+    url(../img/hero.jpg);
+
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.header__logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+.header__logo {
+  height: 2.4rem;
+}
+
+.header__title-box {
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header__title-main {
+  display: block;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2rem;
+  animation-name: slide-in-from-left;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.header__title-sub {
+  display: block;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 1rem;
+  margin-left: 0.4rem;
+  animation-name: slide-in-from-right;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+}
+
+.header__button-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+}
+
+.header__button {
+  font-weight: 400;
+  text-transform: uppercase;
+  height: 3.6rem;
+  width: 13.5rem;
+  font-size: 0.8rem;
+  background-color: white;
+  color: #5d5c5c;
+  border: 1px solid white;
+  border-radius: 3.6rem;
+  position: relative;
+}
+
+.header__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 2px 10px 0px rgba(173, 173, 173, 1);
+}
+
+.header__button:active {
+  transform: translateY(-1px);
+  box-shadow: 0px 2px 10px 0px rgb(152, 151, 151);
+}
+
+.header__button::after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  border-radius: 3.6rem;
+  animation: fade-in 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.header__button:hover::after {
+  animation: fade-out 0.4s ease-in-out;
+}
